@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.staffController">
+    <children>
+        <TableView fx:id="staffTabletv" layoutY="54.0" prefHeight="237.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="staffIdColumn" prefWidth="132.0" text="Staff ID" />
+                <TableColumn fx:id="staffNameColumn" minWidth="9.0" prefWidth="231.0" text="Staff Name" />
+                <TableColumn fx:id="jobTypeColumn" maxWidth="338.0" minWidth="-1.0" prefWidth="236.0" text="Job Type" />
+            </columns>
+        </TableView>
+        <AnchorPane layoutY="296.0" prefHeight="104.0" prefWidth="600.0">
+            <children>
+                <Button fx:id="deleteStaffbt" layoutX="333.0" layoutY="78.0" mnemonicParsing="false" onAction="#deleteStaffButton" prefHeight="25.0" prefWidth="100.0" text="Delete" />
+                <GridPane layoutX="57.0" prefHeight="104.0" prefWidth="276.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="79.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="197.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="35.0" minHeight="0.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="38.0" minHeight="7.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="22.0" minHeight="0.0" prefHeight="2.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <TextField fx:id="addStaffIDtf" GridPane.columnIndex="1" />
+                        <TextField fx:id="addStaffNametf" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="addJobTypetf" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button fx:id="addStaffbt" mnemonicParsing="false" onAction="#addStaffButton" prefHeight="25.0" prefWidth="100.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Staff ID" />
+                        <Label text="Staff Name" GridPane.rowIndex="1" />
+                        <Label prefHeight="17.0" prefWidth="102.0" text="Job Type" GridPane.rowIndex="2" />
+                    </children>
+                </GridPane>
+            <Button layoutX="472.0" layoutY="78.0" mnemonicParsing="false" onAction="#generateStaffReports" prefHeight="25.0" prefWidth="114.0" text="Generate Staff csv" />
+            </children></AnchorPane>
+        <HBox layoutX="123.0" layoutY="9.0" prefHeight="40.0" prefWidth="375.0">
+            <children>
+                <Label contentDisplay="CENTER" prefHeight="22.0" prefWidth="68.0" text="Search:" />
+                <TextField fx:id="staffSearchtf" alignment="CENTER" prefHeight="25.0" prefWidth="141.0" />
+                <ComboBox fx:id="searchcb" prefHeight="25.0" prefWidth="125.0" promptText="search by:" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

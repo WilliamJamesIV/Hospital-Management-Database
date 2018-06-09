@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mainController">
+  <children>
+    <TabPane layoutY="25.0" prefHeight="454.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Information">
+          <content>
+            <AnchorPane prefHeight="104.0" prefWidth="600.0">
+              <children>
+                <TextArea layoutX="7.0" prefHeight="404.0" prefWidth="591.0" text="Welcome to the Hospital Data Management system&#10;&#10;My Hospital Data Management system will efficiently manage data for a hospital&#10;&#10;Users will be able to add, update and delete data&#10;&#10;For updating information, double click on the information you want to update,&#10;Make sure you press enter when you have finished updating information&#10; &#10;Users will be able to print records to csv file&#10;Users will be able to search using a given identifier&#10;&#10;To avoid Errors in program please consider the following:&#10; -There are only 20 hospitals and diseases, 12 medicines and departments. So Far&#10;    Only insert Id's for that correlate to this(ex. 1-20 hospital/disease, 1-12 medicine/department)&#10; - An error will show if any field is left blank while updating/inserting(don't leave any blank)&#10; - Either rename the csv file, or delete it before generating again from the same tab&#10; -If information not relating to data type is inserted/uppdated, an error will occur.&#10;&#10;Created by William James" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Patient">
+          <content>
+            <fx:include source="patientTab.fxml" />
+          </content>
+        </Tab>
+        <Tab text="Doctor">
+          <content>
+            <fx:include source="doctorTab.fxml" />
+          </content>
+        </Tab>
+        <Tab text="Staff">
+          <content>
+            <fx:include source="staffTab.fxml" />
+          </content>
+        </Tab>
+        <Tab text="Treatment">
+          <content>
+            <fx:include source="treatmentTab.fxml" />
+          </content>
+        </Tab>
+        <Tab text="Room">
+               <content>
+                 <fx:include source="roomTab.fxml" />
+               </content></Tab>
+      </tabs>
+    </TabPane>
+    <MenuBar prefHeight="25.0" prefWidth="600.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Close" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Delete" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </children>
+</AnchorPane>

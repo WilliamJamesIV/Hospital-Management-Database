@@ -1,0 +1,5 @@
+To run My Hospital Data Management System use the HMS.jar file(C:\Users\will\IdeaProjects\HMS\out\artifacts\HMS). out-artifacts-HMS.
+Other things to know:
+when Exporting to csv, please either change the name of the file, or delete it before repaeting the process.
+Try to input data as accurately as possible.
+Enjoy!

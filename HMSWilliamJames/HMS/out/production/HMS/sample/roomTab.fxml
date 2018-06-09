@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.roomController">
+  <children>
+    <TableView fx:id="roomTabletv" layoutX="0.0" layoutY="37.0" prefHeight="241.0" prefWidth="600.0">
+      <columns>
+        <TableColumn fx:id="roomIDColumn" prefWidth="87.0" text="RoomID" />
+        <TableColumn fx:id="staffIDColumn" minWidth="9.0" prefWidth="101.0" text="StaffID" />
+        <TableColumn fx:id="roomStatusColumn" maxWidth="370.0" minWidth="0.0" prefWidth="127.0" text="RoomStatus(O or C)" />
+        <TableColumn fx:id="departmentIDColumn" maxWidth="200.0" minWidth="0.0" prefWidth="97.0" text="DepartmentID" />
+        <TableColumn fx:id="hospitalIDColumn" maxWidth="248.0" minWidth="0.0" prefWidth="185.0" text="HospitalID" />
+      </columns>
+    </TableView>
+    <AnchorPane layoutX="0.0" layoutY="247.0" minHeight="152.0" prefHeight="152.0" prefWidth="600.0">
+      <children>
+        <Button fx:id="deleteRoomBT" layoutX="477.0" layoutY="126.0" mnemonicParsing="false" onAction="#deleteRoomButton" prefHeight="25.0" prefWidth="123.0" text="Delete" />
+        <GridPane layoutX="0.0" layoutY="31.0" prefHeight="95.0" prefWidth="457.0">
+          <children>
+            <TextField fx:id="addRoomIDtf" GridPane.columnIndex="1" />
+            <TextField fx:id="addStaffIDtf" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="RoomID" />
+            <Label text="StaffID" GridPane.rowIndex="1" />
+            <Label text="RoomStatus" GridPane.rowIndex="2" />
+            <Label text="DepartmentID" GridPane.columnIndex="2" />
+            <TextField fx:id="addHospitalIDtf" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="addDepartmentIDtf" prefWidth="27.0" GridPane.columnIndex="3" />
+            <TextField fx:id="addRoomStatustf" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="HospitalID" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="addRoombt" mnemonicParsing="false" onAction="#addRoomButton" prefHeight="24.999900000002526" prefWidth="123.0" text="Add" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="10.0" prefWidth="68.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="126.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="78.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="182.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="0.0" prefWidth="0.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="0.0" prefWidth="0.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints maxHeight="45.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="45.0" minHeight="7.0" prefHeight="26.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="58.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="58.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="22.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <Button layoutX="345.0" layoutY="125.0" mnemonicParsing="false" onAction="#generateRoomReports" prefHeight="25.0" prefWidth="123.0" text="Generate Reports" />
+      </children>
+    </AnchorPane>
+    <HBox layoutX="123.0" layoutY="9.0" prefHeight="40.0" prefWidth="375.0">
+      <children>
+        <Label contentDisplay="CENTER" prefHeight="22.0" prefWidth="68.0" text="Search:" />
+        <TextField fx:id="roomSearchtf" alignment="CENTER" prefHeight="25.0" prefWidth="141.0" />
+        <ComboBox fx:id="searchcb" prefHeight="25.0" prefWidth="125.0" promptText="search by:" />
+      </children>
+    </HBox>
+  </children>
+</AnchorPane>
